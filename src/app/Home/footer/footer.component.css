@@ -1,0 +1,47 @@
+footer{
+    background: linear-gradient(to right, #f4afb965, #ffdde1);
+    min-height: 400px;
+
+}
+footer img{
+    width: 100%;
+}
+.footer-box{
+    padding: 20px;
+    color: rgb(92, 88, 88);
+}
+.footer-box img{
+    width: 150px;
+    height: 80px;
+    margin-bottom: 25px;
+}
+.contact-us{
+    margin-top: 40px;
+}
+.contact{
+    font-weight: bold;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+.social{
+    margin-top: 50px;
+}
+.footer-box .icon{
+     width: 60px;
+    transition: 0.5s;
+}
+.footer-box .icon:hover{
+    transform: translateY(-10px);
+}
+hr{
+    color:rgb(255, 255, 255);
+    height: 2.5px;
+}
+.copyrights{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    color: rgb(92, 88, 88);
+    text-transform: capitalize;
+}

@@ -1,0 +1,51 @@
+<div class="all">
+<div *ngFor="let T of tailors let i =index">
+    <div class="container inside">
+        <!-- <div class="row"> -->
+            <div class="col-xs-6 col-md-6">
+                            <!-- First product box start here-->
+                            <div class="prod-info-main prod-wrap clearfix">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-6 col-xs-6">
+                                        <div class="product-image">
+                                            <img src="/assets/4cats.jpg" class="img-responsive" width="200px" height="200px"> 
+                                            <span class="tag2 hot">
+                                                SPECIAL
+                                            </span>
+                                       </div>
+                                    </div> 
+                                    <div class="col-md-6 col-sm-6 col-xs-6 data">
+                                                <div class="product-deatil">
+                                                            <h3 class="name">
+                                                                <label> Name:
+                                                                   <span>{{T.userName| json}}</span>
+                                                                </label>
+                                                            </h3>
+                                
+                                                            <p class="price-container">
+                                                                <span>City:{{T.city| json}}</span>
+                                                            </p>
+                                                                <h6> Address :
+                                                                    <span>{{T.address| json}}</span> 
+                                                                </h6>                      
+                                                            
+                                                    <span class="tag1"></span>
+                                                </div>
+                                                <div class="product-info smart-form">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <!-- (click)="GeteachTailor(T.userName)" -->
+                                                            
+                                                            <a href="javascript:void(0);"  [routerLink]="['/profile',T.userName]" class="btn">See Profile</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                </div> 
+                  </div>
+            </div>
+            </div>
+      </div>
+    <!-- </div> -->
+</div>
+</div>
+

@@ -1,0 +1,125 @@
+/*
+h2 {
+  position: relative;
+}
+header h2::before {
+content:'';
+width:50%;
+height:2vh;
+display:block;
+border-bottom:1px solid black;
+border-top:1px solid black;
+position:absolute;
+bottom:-4vh;
+left:25%;
+}
+.bg-special2 header h2::before {
+  content:'';
+  width:50%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid white;
+  border-top:1px solid white;
+  position:absolute;
+  bottom:-4vh;
+  left:25%;
+  }
+header h2::after {
+  content:'';
+  width:85%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid black;
+  position:absolute;
+  bottom:-3vh;
+  left:7.5%;
+  }
+  .bg-special2 header h2::after{
+    content:'';
+  width:85%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid white;
+  position:absolute;
+  bottom:-3vh;
+  left:7.5%;
+
+  }
+.bg-special1 {
+ background-image:  linear-gradient(90deg,rgb(95, 156, 255),rgb(2, 61, 155));
+ background-image :linear-gradient(to left,#1565C0,#23C5DB);
+ background-image: url(./../../../assets/cover2.jpg);
+ background-size: 100%;
+ background-position: center center;
+
+}
+.bg-special2{
+  background-image :linear-gradient(to left,#1565C0,#23C5DB);
+
+}
+.bg-special3 {
+  background-image: linear-gradient(90deg, #e8edf1 0%,#eee8ee 100%);
+
+  } .menu{
+  background-color: rgba(0,0,0,.4);
+  box-shadow: 0 25px 50px rgba(0,0,0,.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+} */
+section{ background: linear-gradient(to right, #f4afb965, #ffdde1);}
+.menu ul {
+list-style: none;
+position: relative;
+transform: skewY(-15deg);
+}
+.menu ul li {
+  background-image:  linear-gradient(90deg,rgb(95, 156, 255),rgb(2, 61, 155));
+  /* background-image: linear-gradient(90deg, #e8edf1 0%,#eee8ee 100%); */
+
+  padding:1rem;
+width:250px;
+position: relative;
+transition: 0.5s;
+border-bottom: solid 1px #222;
+color:white;
+}
+.menu ul li:hover ::after {
+  background-image:linear-gradient(90deg,#15f454,#23a218);
+}
+.menu ul li:hover ::before {
+  background-image:linear-gradient(90deg,#15f454,#23a218);
+
+}
+.menu ul li:hover {
+  background-image:linear-gradient(90deg,#15f454,#23a218);
+  backdrop-filter: blur(10px);
+  transform: translateX(-50px);
+
+}
+
+.menu ul li ::before {
+  content: '';
+  background-image:linear-gradient(90deg,rgb(95, 156, 255),rgb(2, 61, 155));
+  width:40px;
+  height:100%;
+  position: absolute;
+  padding: 1rem;
+  top:0;
+  left:-40px;
+  transform-origin: right;
+  transform: skewY(45deg);
+}
+
+
+.menu ul li ::after {
+content: '';
+width:100%;
+height:40px;
+background-image:linear-gradient(90deg,rgb(95, 156, 255),rgb(2, 61, 155));
+position: absolute;
+top:-40px;
+left:0;
+transform-origin: bottom;
+transform: skewX(45deg);
+}
+

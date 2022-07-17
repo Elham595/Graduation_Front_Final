@@ -1,0 +1,107 @@
+<app-sidebar *ngIf="tailor" [username]="username" [email]="tailor.email"></app-sidebar>
+<div class="row py-5 px-4">
+    <div *ngIf="tailor" class="col-md-5 mx-uto">
+        <!-- Profile widget -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <div class="px-4 pt-0 pb-4 cover">
+                <div class="media align-items-end profile-head">
+                    <img src="/assets/insan.jpeg" alt="..." width="130" class="image">
+                    <div class="data">
+                        <h4 class="mt-0 mb-0">{{ tailor.userName }}</h4>
+                        <button type="button" class="btn btn-outline-dark inline" data-mdb-ripple-color="dark"
+                            style="z-index: 1;">
+                            Change Picture
+                        </button>
+                        <!-- <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>{{ tailor.city }}</p>  -->
+                        <button type="button" class="btn btn-outline-dark inline" data-mdb-ripple-color="dark"
+                            [routerLink]="['/chat']"><i class="fas fa-comment"></i>
+                            Chat With Tailor
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bg-light p-4 d-flex justify-content-end text-center">
+                <ul class="list-inline mb-0">
+                    <li class="">
+                        <i class="fa-solid fa-circle-user color"></i>&nbsp;&nbsp;{{tailor.userNameNavigation.firstName}}
+                        {{tailor.userNameNavigation.middleName}}
+                        {{tailor.userNameNavigation.lastName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li class="">
+                        <i
+                            class="fa-solid fa-mobile-screen color"></i>&nbsp;&nbsp;{{tailor.userNameNavigation.mobileNumber}}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li class="">
+                        <i class="fa-solid fa-location-dot color"></i>&nbsp;&nbsp;{{ tailor.address }}
+                    </li>
+                    <li class="">
+                        <i class="fa-solid fa-arrow-trend-up color"></i>&nbsp;&nbsp;<span>Experience Years :</span> {{
+                        tailor.experienceYears }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li class="">
+                        <i
+                            class="fa-solid fa-cake-candles color"></i>&nbsp;&nbsp;{{tailor.userNameNavigation.birthDate}}
+                    </li>
+                    <li class="">
+                        <i class="fa fa-envelope color"></i>&nbsp;&nbsp;{{ tailor.email }}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li class="">
+                        <i class="fa-solid fa-venus-mars color"></i>&nbsp;&nbsp;{{tailor.gender}}
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="px-4 py-3">
+                <h5 class="mb-0">About</h5>
+                <div class="p-4 rounded shadow-sm bg-light">
+                    <div class="font-italic mb-0">
+                        <div class="font-italic mb-0">
+                            <p class="font-italic mb-0">
+                                {{ tailor.bio }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Recent photos</h5>
+                        <a href="#" class="btn btn-link text-muted">Show all</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-2 pr-lg-1">
+                            <img src="/assets/4cats.jpg" alt="" class="img-fluid rounded shadow-sm">
+                        </div>
+                        <div class="col-lg-6 mb-2 pl-lg-1">
+                            <img src="/assets/4cats.jpg" alt="" class="img-fluid rounded shadow-sm">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngIf="tailor"> -->
+<!-- {{ tailor.userName }} /////done
+    {{ tailor.email }}      ////////done
+    {{ tailor.address }}   ////done
+    {{ tailor.city }}  /// done
+    {{ tailor.experienceYears }}   //////done
+    {{ tailor.bio }}                     //////done
+    {{tailor.gender}}    /////done
+    {{tailor.userNameNavigation.firstName}}    /////done
+    {{tailor.userNameNavigation.middleName}}  ///////////done
+    {{tailor.userNameNavigation.lastName}}    //////////done
+    {{tailor.userNameNavigation.birthDate}}  //////done
+    {{tailor.userNameNavigation.mobileNumber}} ////done
+
+
+    NOOOOO
+    {{tailor.emailNavigation.Password}}  -->
+
+
+<!-- </div> -->

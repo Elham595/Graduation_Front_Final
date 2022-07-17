@@ -1,0 +1,62 @@
+<store-sidebar *ngIf="Store" [username]="username" [email]="Store.email"></store-sidebar><!---->
+<div class="row py-5 px-4">
+    <div *ngIf="Store" class="col-md-5 mx-auto">
+        <!-- Profile widget -->
+        <div class="bg-white shadow rounded overflow-hidden">
+            <div class="px-4 pt-0 pb-4 cover">
+                <div class="media align-items-end profile-head">
+                    <img src="../../../assets/d.jpeg" alt="..." width="130" class="image">
+                    <div class="data">
+                        <h4 class="mt-0 mb-0">{{ Store.userName }}</h4>
+                        <button type="button" class="btn btn-outline-dark inline" data-mdb-ripple-color="dark"
+                        style="z-index: 1;">
+                        Change Picture
+                        </button>
+                            <!-- <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>{{ tailor.city }}</p>  -->
+                            <button type="button" class="btn btn-outline-dark inline"
+                                    data-mdb-ripple-color="dark" routerLink="/chat"><i class="fas fa-comment"></i>
+                                    Chat With Designer
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-light p-4 d-flex justify-content-end text-center">
+                <ul class="list-inline mb-0">
+                    <li class="">
+                       <i class="fa-solid fa-mobile-screen color"></i>&nbsp;&nbsp;{{Store.userNameNavigation.mobileNumber}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+                     <li class="">
+                            <i class="fa-solid fa-location-dot color"></i>&nbsp;&nbsp;{{ Store.address }}&nbsp;&nbsp;
+                    </li>
+                     <li class="">
+                            <i class="fa fa-envelope color"></i>&nbsp;&nbsp;{{ Store.email }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </li>
+
+                </ul>
+            </div>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Recent photos</h5>
+                        <!-- <a href="#" class="btn btn-link text-muted">Show all</a> -->
+                    </div>
+                    
+                    <div class="row">
+                        <div *ngFor="let fabric of fabrics" class="col-lg-6 mb-2 pr-lg-1">
+
+                            {{ fabric.fablicName }}   {{fabric.price}} EGP
+
+                            <div [ngSwitch]="fabric.fablicName">
+                                <img class="rounded-circle" width="100px"height="100px"  *ngSwitchCase="'Shifone'" src="https://www.thefabricbaron.com/image/cache/data/5403/tupfen-stoff-schwarz-weiss-7mm-437-1000x1000.jpg" />
+                                <img class="rounded-circle" width="100px"height="100px"  *ngSwitchCase="'Cotton'" src="https://www.shaukat.co.uk/wp-content/uploads/2022/05/Cotton.jpg" />
+                                <img  class="rounded-circle" width="100px"height="100px"  *ngSwitchCase="'Silk'" src="https://www.shaukat.co.uk/wp-content/uploads/2022/05/wool.jpg" />
+                                <img class="rounded-circle" width="100px" height="100px" *ngSwitchCase="'Dotted'" src="https://www.shaukat.co.uk/wp-content/uploads/2022/05/otherfabrics.jpg" />
+                               <!--- <img *ngSwitchCase="" [src]="" />
+                                <img *ngSwitchCase="" [src]="" /> -->
+                                <img *ngSwitchDefault="" [src]="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

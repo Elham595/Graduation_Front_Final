@@ -1,0 +1,71 @@
+<div class="container">
+<div class="card">
+  <div class="card-header">Add New Design</div>
+  <!-- <div class="card-body">
+    <section>
+      <label id="example-radio-group-label"> Photo uploaded? </label>
+      <div>
+         <mat-radio-group>
+          aria-labelledby="example-radio-group-label"
+          class="form-check-inline"
+          [(ngModel)]="design.Status">
+          <div class="form-check">
+            <mat-radio-button [value]="'uploaded'"> Upload </mat-radio-button>
+          </div>
+          <div class="form-check">
+            <mat-radio-button [value]="'Exits On web site'">
+              Exits On web site
+            </mat-radio-button>
+          </div>
+        </mat-radio-group>
+      </div>
+    </section>
+  </div> -->
+
+  <div>
+    <label for="formFileDisabled" class="form-label" style="width: 250px">
+      Disabled file input example
+    </label>
+    <input
+      name="file"
+      class="form-control"
+      type="file"
+      id="formFileDisabled"
+      (change)="uploadimage($event)"
+    />
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputState">Design type</label>
+
+    <select>
+      id="inputState"
+      class="form-control"
+      [(ngModel)]="design.cloth"
+                           
+      <option selected>Choose your design Type</option>
+      <!-- <option *ngFor="let item of clothes" [ngValue]="item">
+        {{ item.clotheName }}
+      </option> -->
+    </select>
+
+    <label class="form-lable">Design Date:</label>
+    <input/>
+      type="date"
+      class="form-control"
+      name="designData"
+      [(ngModel)]="design.DesignDate"
+    
+    <button>
+      type="button"
+      class="btn btn-primary"
+      data-toggle="button"
+      aria-pressed="false"
+      autocomplete="off"
+      (click)="onupload()"
+    >
+      submit
+    </button>
+    
+  </div>
+</div>
+</div>

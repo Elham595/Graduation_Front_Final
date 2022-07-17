@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 23px;
+    font-family: 'Montserrat';
+    font-style: italic;
+}
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+*{
+    font-size: 20px;
+    /* font-family:'Helvetica Neue', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Header h2 Style*/
+h2 {
+  position: relative;
+}
+header h2::before {
+content:'';
+width:50%;
+height:2vh;
+display:block;
+border-bottom:1px solid black;
+border-top:1px solid black;
+position:absolute;
+bottom:-4vh;
+left:25%;
+}
+.bg-special2 header h2::before {
+  content:'';
+  width:50%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid white;
+  border-top:1px solid white;
+  position:absolute;
+  bottom:-4vh;
+  left:25%;
+  }
+  .bg-special4 header h2::before {
+    content:'';
+    width:50%;
+    height:2vh;
+    display:block;
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+    position:absolute;
+    bottom:-4vh;
+    left:25%;
+    }
+header h2::after {
+  content:'';
+  width:85%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid black;
+  position:absolute;
+  bottom:-3vh;
+  left:7.5%;
+  }
+  .bg-special2 header h2::after{
+    content:'';
+  width:85%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid white;
+  position:absolute;
+  bottom:-3vh;
+  left:7.5%;
+
+  }
+  .bg-special4 header h2::after{
+    content:'';
+  width:85%;
+  height:2vh;
+  display:block;
+  border-bottom:1px solid white;
+  position:absolute;
+  bottom:-3vh;
+  left:7.5%;
+
+  }
+.bg-special1 {
+ /* background-image:  linear-gradient(90deg,rgb(95, 156, 255),rgb(2, 61, 155)); */
+ background-image :linear-gradient(to left,#1565C0,#23C5DB);
+ background-image: url(./assets/cover2.jpg);
+ background-size: 100%;
+ background-position: center center;
+
+}
+.bg-special2{
+  background-image :linear-gradient(to left,#1565C0,#23C5DB);
+  color:white;
+
+}
+.bg-special3 {
+  background-image: linear-gradient(90deg, #e8edf1 0%,#eee8ee 100%);
+
+ }
+ .bg-special4{
+  background-image: linear-gradient(45deg,rgb(245, 205, 153),rgb(245, 202, 188));
+  color:white;
+ }
+.bg-glass {
+  background-color: rgba(255,255,255,.4);
+  box-shadow: 0 25px 50px rgba(0,0,0,.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1rem;
+}
+
+.glass-black-container {
+  color:black;
+  background-color: rgba(0,0,0,.4);
+  box-shadow: 0 25px 50px rgba(0,0,0,.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.img-container {
+  border : rgba(0,0,0,.5) 0.5rem solid;
+  backdrop-filter: blur(10px);
+  overflow:visible;
+  border-radius: 0.8rem;
+}
+.design-img {
+  top:1.5rem;
+  left:1.5rem;
+  width:100%;
+  border-radius: .5rem;
+}
+.input {
+  background-color: rgba(0,0,0,.5);
+  color:white;
+  border-radius: 10px;
+ }
+.bg-section {
+
+  background-image: linear-gradient(45deg,rgb(245, 205, 153),rgb(245, 202, 188));
+  padding: 3.5rem;
+  position: relative;
+  overflow:auto;
+}
+.btn-hover{
+  transition: 0.5s;
+}
+.btn-hover:hover {
+  background-color: #1565C0;
+}
+ /*End Header h2 Style*/
+

@@ -1,0 +1,21 @@
+<section class="container">
+    <div class="row">
+      <div class="image col-md-6">
+        <img src="../../../assets/undraw_order_confirmed_re_g0if.svg"/>
+     </div>
+      <div class="data col-md-6">
+        <select  #teams (change)="onSelected(teams.value)" class="form-control form-control-lg">
+          <optgroup label="Personal Account">
+             <option hidden>choose your role...</option>
+             <option value="client">Client</option>
+          </optgroup>
+          <optgroup label="Business Account">
+            <option value="tailor">Tailor</option>
+            <option value="designer">Designer</option>
+            <option value="store"> store </option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+</section>
+

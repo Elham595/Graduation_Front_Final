@@ -1,0 +1,42 @@
+
+<section class="bg-special4">
+  <div class="container  p-5  m-auto row justify-content-center align-items-stretch ">
+    <header class="col-12 p-3 mb-5 d-flex justify-content-center">
+      <h2>{{clotheName}}</h2>
+    </header>
+
+
+
+    <div *ngFor="let design of designs" class="col-lg-4 col-md-6 col-sm-12 mb-4 ">
+      <a [routerLink]="['/create/designOrder',Measurment,design.designId,design.designImage]">
+        <img class="w-100 h-100 "[src]="baseUrl.DomainName+'/'+imageStaticPath+'/'+design.designImage" alt="{{clotheName}}">
+      </a>
+    </div>
+
+
+    <nav aria-label="..." class="col-12 p-3 mb-5 d-flex justify-content-center">
+      <ul class="pagination">
+        <li class="page-item " [class.disabled]="pageNumber==1" (click)="displayDesign(pageNumber-1)">
+          <a class="page-link">Previous</a>
+        </li>
+
+        <li class="page-item " [class.active]="pageNumber==pageStart" (click)="displayDesign(pageStart)">
+          <a class="page-link">{{pageStart}}</a>
+        </li>
+
+        <li class="page-item" *ngIf="numberOfPages>=(pageStart+1)" [class.active]="pageNumber==pageStart+1" (click)="displayDesign(pageStart+1)" aria-current="page">
+          <a class="page-link">{{pageStart+1}}</a>
+        </li>
+
+        <li class="page-item" *ngIf="numberOfPages>=(pageEnd)" [class.active]="pageNumber==pageEnd" (click)="displayDesign(pageEnd)">
+          <a class="page-link" >{{pageEnd}}</a>
+        </li>
+
+        <li class="page-item" [class.disabled]="numberOfPages==pageNumber" (click)="displayDesign(pageNumber+1)">
+          <a class="page-link">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</section>

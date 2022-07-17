@@ -1,0 +1,64 @@
+<div class="area"></div>
+<nav class="main-menu">
+    <div class="smartphone-menu-trigger"></div>
+    <header class="avatar">
+        <img src="../../../assets/designer.jpeg" />
+        <h2>{{username}}</h2>
+    </header>
+
+    <!-- //////////********************************************///////////////////// -->
+
+    <ul>
+        <li>
+                <i class=" fa fa-solid fa-gears fa-2x"></i>
+                <h3 class="nav-text">
+                    Setting
+                </h3>
+        </li>
+        <!-- ******************************************** -->
+        <li class="has-subnav">
+            <a [routerLink]="['/updateStore', username]">
+                <i class=" fa fa-solid fa-user fa-2x"></i>
+                <span class="nav-text">
+                    Update Profile
+                </span>
+            </a>
+        </li>
+
+        <!-- ******************************************** -->
+        <li>
+        <li class="has-subnav">
+            <a [routerLink]="['/ChangeStorePassword', email]">
+                <i class="fa fa-solid fa-key fa-2x"></i>
+                <span class="nav-text">
+                    Change Password
+                </span>
+            </a>
+        </li>
+        <!-- ******************************************** -->
+        <li>
+        <li class="has-subnav">
+            <a [routerLink]="['/DeleteAccount']">
+                <!-- <i class="fa-solid fa-ban"></i> -->
+                <i class="fa fa-solid fa-ban fa-2x"></i>
+                <span class="nav-text">
+                    Delete your account
+                </span>
+            </a>
+        </li>
+
+
+
+    </ul>
+
+    <ul class="logout">
+        <li>
+            <a href="#">
+                <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>

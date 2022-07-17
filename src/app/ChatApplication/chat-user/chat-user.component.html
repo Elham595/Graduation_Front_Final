@@ -1,0 +1,32 @@
+<div *ngIf="activeUser === user" class="row h-100" style="margin-left: 10px;">
+  <div class="col-11 ml-1 h-100 w-100 chat-text bg-secondary">
+    <div class="row pb-5 " style="height: 100%;">
+      <div class="col-12 my-2">
+        <message class="message"
+        *ngFor="let recivedMessage of messages"
+        [connectionId]="user.connectionId"
+        [message]="recivedMessage"
+        [username]="user.username"
+        ></message>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center message-container">
+      <div clas="col-7" style="width: auto;">
+        <input
+          [(ngModel)]="message"
+          class="form-control"
+          placeholder="Enter Your Message"
+        />
+      </div>
+      <div class="col-3">
+        <button
+          class="btn ms-4"
+          [disabled]="!hasText()"
+          (click)="Send()"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+/* @import '../../Home/navbar/navbar.component';
+.navbar{
+    height: 90px;
+    color: rgb(65, 24, 65);
+    background-color: rgb(87, 29, 9);
+ } */
+#formbody{
+	background-image: url("../../../assets/b.jpeg");
+	height: 699px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+}
+.form-control{
+    background-color: transparent;
+    border: 1px solid darkgrey;
+}
+.myform{
+
+	border:1px solid darkgray;
+	border-radius: 20px;
+	min-height: 600px;
+	width: 700px;
+    text-align: center;
+    padding: 20px;
+	position: absolute;
+	top:20%;
+	left:30%;
+	box-shadow: 0.6em 0.6em 1.2em#c4ccd6,
+				-0.5em -0.5em 1em #fff;
+    background-color: transparent;
+
+}
+.btn{
+    background: linear-gradient(to right, #d3708e, #c79e67 );
+    color:rgb(248, 237, 237);
+    border:none;
+	border-radius: 30px;
+	width: 110px;
+    text-transform: capitalize;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 17px;
+    margin-top: 40px;
+}
+.btn:hover{
+    transform: scale(1,1.2);
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #e49917;
+    color: #ffcc74;
+    transition: 0.3s;
+}

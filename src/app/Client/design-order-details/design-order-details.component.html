@@ -1,0 +1,113 @@
+<section class="bg-section ">
+  <div class="d-flex justify-content-center p-2 ">
+    <header>
+      <h2>Design Order Details</h2>
+    </header>
+  </div>
+  <div class="container row mx-auto mt-5 justify-content-center align-items-center">
+
+    <div class=" col-lg-4 mb-5 img-container p-0 ">
+
+      <img  [src]="baseUrl.DomainName+'/'+designOrder['design']['designImage']" class="w-100 position-relative design-img">
+
+  </div>
+
+    <div class="glass-black-container offset-lg-1 col-lg-7 align-content-stretch">
+      <div>
+
+        <div class="m-3 text-center text-black-50">
+          <h3>
+            {{clotheName}}
+          </h3>
+
+        </div>
+
+        <div class="m-3 text-center text-black-50">
+          <h5>
+            {{designOrder['orderDate']|date}}
+          </h5>
+
+        </div>
+
+        <div class="m-3  text-black-50" *ngIf="designOrder['topMeasurment']">
+          <h5>
+            Top Measurements
+          </h5>
+
+        </div>
+
+
+        <div class="text-center row justify-content-sm-between" *ngIf="designOrder['topMeasurment']">
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button"> Nick #{{designOrder['topMeasurment']['nick']}}</button>
+
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button"> High Hip #{{designOrder['topMeasurment']['highHip']}}</button>
+
+          <button class="input mb-2 btn btn-hover col-lg-5" type="button"> Hip #{{designOrder['topMeasurment']['hip']}}</button>
+
+
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">Arm Length #{{designOrder['topMeasurment']['armLength']}}</button>
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">Back Waist Length #{{designOrder['topMeasurment']['backWaistLength']}}</button>
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">Front Waist Length #{{designOrder['topMeasurment']['frontWaistLength']}}</button>
+
+          <button class="input mb-2 btn btn-hover col-lg-5" type="button"> Waist #{{designOrder['topMeasurment']['waist']}}</button>
+
+          <button class="input mb-2 btn btn-hover col-lg-5" type="button"> Bust #{{designOrder['topMeasurment']['bust']}}</button>
+
+        </div>
+
+        <div class="m-3  text-black-50" *ngIf="designOrder['bottomMeasurement']">
+          <h5>
+            Bottom Measurements
+          </h5>
+
+        </div>
+
+
+        <div class="text-center row justify-content-sm-between" *ngIf="designOrder['bottomMeasurement']">
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button"> Thigh #{{designOrder['bottomMeasurement']['thigh']}}</button>
+
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button"> InSeam #{{designOrder['bottomMeasurement']['inseam']}}</button>
+
+          <button class="input mb-2 btn btn-hover col-lg-5" type="button"> OutSeam #{{designOrder['bottomMeasurement']['outSeam']}}</button>
+
+
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">crotch Depth #{{designOrder['bottomMeasurement']['crotchDepth']}}</button>
+
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">Ankle Length #{{designOrder['bottomMeasurement']['ankle']}}</button>
+
+
+
+        </div>
+
+
+        <div class="m-3  text-black-50" >
+          <h5>
+            Fabrics
+          </h5>
+
+        </div>
+
+
+        <div class="text-center row justify-content-sm-between" *ngFor="let fabric of designOrder['designOrderFabrics']">
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">
+            #{{fabricDic.get(fabric['fabricId'])}}
+          </button>
+
+          <button class="input mb-2  btn btn-hover col-lg-5" type="button">
+            #{{colorDic.get(fabric['colorId'])}}
+          </button>
+
+
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+

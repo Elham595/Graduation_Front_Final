@@ -1,0 +1,70 @@
+.form-section {
+  /* background-image: url("./../../../assets/cm.png"),linear-gradient(90deg,rgb(95, 156, 255),rgb(2, 61, 155)); */
+  /* background-image : url("./../../../assets/svgviewer-output.svg"),linear-gradient(to left,#1565C0,#23C5DB); */
+  /* background-image : url("./../../../assets/svgviewer-output.svg"),linear-gradient(to left,#F1E6DD 0%,#F1DDDE 100%); */
+/*  background-image:  url("./../../../assets/svgviewer-output.svg"),linear-gradient(45deg,rgb(245, 205, 153),rgb(245, 202, 188));*/
+  /* background-image:  url("./../../../assets/svgviewer-output.svg"), linear-gradient(45deg, slateblue, coral); */
+  /* background-color: rgb(248,249,250); */
+ background: linear-gradient(45deg,rgb(235, 192, 137),rgb(255, 216, 203));
+  /* background-image: url("./../../../assets/svgviewer-output.svg"),linear-gradient(to right,#F1E6DD,F1DDDE); */
+  /* background-size: 40% 40% , 100% , 100%; */
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 3.5rem;
+  position: relative;
+  overflow:auto;
+}
+/* .container{
+  background-image: url("./../../../assets/cm.png");
+  background-size: cover;
+
+
+} */
+.form-container {
+  color:black;
+  /* background-color: rgba(255,255,255,.3); */
+  background-color: rgba(254, 229, 229, 0.4);
+  box-shadow: 0 25px 50px rgba(0,0,0,.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.input {
+ background-color: rgb(226, 181, 164);/*rgba(0,0,0,.5)*/
+ color:white;
+ border-radius: 10px;
+}
+.img-container {
+  border : rgba(0,0,0,.5) 0.5rem solid;
+  backdrop-filter: blur(10px);
+  overflow:visible;
+  border-radius: 0.8rem;
+}
+.design-img {
+  top:1.5rem;
+  left:1.5rem;
+  width:100%;
+  border-radius: .5rem;
+}
+.btn{
+  background: linear-gradient(to right, #d3708e, #c79e67 );
+  color:rgb(248, 237, 237);
+  border:none;
+  border-radius: 30px;
+  text-transform: capitalize;
+  font-size: 19px;
+  font-weight: bold;
+  width: 100px;
+  padding: 12px;
+  margin-top: 10px;
+}
+.btn:hover{
+  transform: scale(1,1.2);
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #e49917;
+  color: #ffcc74;
+  transition: 0.3s;
+}
+header{margin-top: -45px; margin-bottom: -10px;}

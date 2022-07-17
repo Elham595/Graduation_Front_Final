@@ -1,0 +1,266 @@
+<section class="form-section ">
+  <div class="d-flex justify-content-center p-2 ">
+    <header>
+      <h2>Create Tailor Order</h2>
+    </header>
+  </div>
+  <div class="container row mx-auto mt-5 justify-content-center align-items-center">
+
+    <div class=" col-lg-4 mb-5 img-container p-0 ">
+
+      <img [src]="baseUrl.DomainName+baseUrl.DesignIamgeStaticPath+'/'+imageName" class="w-100 position-relative design-img">
+
+  </div>
+    <div class="form-container offset-lg-1 col-lg-6 align-content-stretch">
+      <form class="" [formGroup]="designOrderCreateForm" (ngSubmit)="SubmitDesignOrder(designOrderCreateForm)">
+
+        <fieldset  *ngIf="haveTop">
+          <legend>Top Measurements</legend>
+<!--Input Field Unit-->
+          <div class="m-3 ">
+            <input class="input w-50   p-1 rounded-5 border-0 form-control  " formControlName="Nick" [class.is-valid]="designOrderCreateForm.get('Nick')?.valid" [class.is-invalid]="designOrderCreateForm.get('Nick')?.errors!=null&&designOrderCreateForm.get('Nick')?.touched"  type="number" placeholder="Nick">
+
+            <div  *ngIf="designOrderCreateForm.get('Nick')?.errors!=null&&designOrderCreateForm.get('Nick')?.touched">
+              <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Nick')?.errors?.['required']?'block':'none'">Requierd</div>
+              <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Nick')?.errors?.['pattern']?'block':'none'">
+                Only Number
+              </div>
+
+            </div>
+
+          </div>
+<!--End Input Field Unit-->
+
+<!--Input Field Unit-->
+<div class="m-3 ">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="Bust" [class.is-valid]="designOrderCreateForm.get('Bust')?.valid" [class.is-invalid]="designOrderCreateForm.get('Bust')?.errors!=null&&designOrderCreateForm.get('Bust')?.touched"  type="number" placeholder="Bust">
+
+  <div  *ngIf="designOrderCreateForm.get('Bust')?.errors!=null&&designOrderCreateForm.get('Bust')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Bust')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Bust')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="Hip" [class.is-valid]="designOrderCreateForm.get('Hip')?.valid" [class.is-invalid]="designOrderCreateForm.get('Hip')?.errors!=null&&designOrderCreateForm.get('Hip')?.touched"  type="number" placeholder="Hip">
+
+  <div  *ngIf="designOrderCreateForm.get('Hip')?.errors!=null&&designOrderCreateForm.get('Hip')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Hip')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Hip')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="FrontWaistLength" [class.is-valid]="designOrderCreateForm.get('FrontWaistLength')?.valid" [class.is-invalid]="designOrderCreateForm.get('FrontWaistLength')?.errors!=null&&designOrderCreateForm.get('FrontWaistLength')?.touched"  type="number" placeholder="FrontWaistLength">
+
+  <div  *ngIf="designOrderCreateForm.get('FrontWaistLength')?.errors!=null&&designOrderCreateForm.get('FrontWaistLength')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('FrontWaistLength')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('FrontWaistLength')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="BackWaistLength" [class.is-valid]="designOrderCreateForm.get('BackWaistLength')?.valid" [class.is-invalid]="designOrderCreateForm.get('BackWaistLength')?.errors!=null&&designOrderCreateForm.get('BackWaistLength')?.touched"  type="number" placeholder="BackWaistLength">
+
+  <div  *ngIf="designOrderCreateForm.get('BackWaistLength')?.errors!=null&&designOrderCreateForm.get('BackWaistLength')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('BackWaistLength')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('BackWaistLength')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="HighHip" [class.is-valid]="designOrderCreateForm.get('HighHip')?.valid" [class.is-invalid]="designOrderCreateForm.get('HighHip')?.errors!=null&&designOrderCreateForm.get('HighHip')?.touched"  type="number" placeholder="HighHip">
+
+  <div  *ngIf="designOrderCreateForm.get('HighHip')?.errors!=null&&designOrderCreateForm.get('HighHip')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('HighHip')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('HighHip')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="Waist" [class.is-valid]="designOrderCreateForm.get('Waist')?.valid" [class.is-invalid]="designOrderCreateForm.get('Waist')?.errors!=null&&designOrderCreateForm.get('Waist')?.touched"  type="number" placeholder="Waist">
+
+  <div  *ngIf="designOrderCreateForm.get('Waist')?.errors!=null&&designOrderCreateForm.get('Waist')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Waist')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Waist')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="ArmLength" [class.is-valid]="designOrderCreateForm.get('ArmLength')?.valid" [class.is-invalid]="designOrderCreateForm.get('ArmLength')?.errors!=null&&designOrderCreateForm.get('ArmLength')?.touched"  type="number" placeholder="ArmLength">
+
+  <div  *ngIf="designOrderCreateForm.get('ArmLength')?.errors!=null&&designOrderCreateForm.get('ArmLength')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('ArmLength')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('ArmLength')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+ </fieldset>
+
+  <fieldset *ngIf="haveBottom">
+      <legend>Bottom Measurements</legend>
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50 p-1 rounded-5 border-0 form-control  " formControlName="Thigh" [class.is-valid]="designOrderCreateForm.get('Thigh')?.valid" [class.is-invalid]="designOrderCreateForm.get('Thigh')?.errors!=null&&designOrderCreateForm.get('Thigh')?.touched"  type="number" placeholder="Thigh">
+
+  <div  *ngIf="designOrderCreateForm.get('Thigh')?.errors!=null&&designOrderCreateForm.get('Thigh')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Thigh')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Thigh')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+<!--Input Field Unit-->
+ <div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="Inseam" [class.is-valid]="designOrderCreateForm.get('Inseam')?.valid" [class.is-invalid]="designOrderCreateForm.get('Inseam')?.errors!=null&&designOrderCreateForm.get('Inseam')?.touched"  type="number" placeholder="Inseam">
+
+  <div  *ngIf="designOrderCreateForm.get('Inseam')?.errors!=null&&designOrderCreateForm.get('Inseam')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Inseam')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Inseam')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50  p-1 rounded-5 border-0 form-control  " formControlName="OutSeam" [class.is-valid]="designOrderCreateForm.get('OutSeam')?.valid" [class.is-invalid]="designOrderCreateForm.get('OutSeam')?.errors!=null&&designOrderCreateForm.get('OutSeam')?.touched"  type="number" placeholder="OutSeam">
+
+  <div  *ngIf="designOrderCreateForm.get('OutSeam')?.errors!=null&&designOrderCreateForm.get('OutSeam')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('OutSeam')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('OutSeam')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50 p-1 rounded-5 border-0 form-control  " formControlName="Ankle" [class.is-valid]="designOrderCreateForm.get('Ankle')?.valid" [class.is-invalid]="designOrderCreateForm.get('Ankle')?.errors!=null&&designOrderCreateForm.get('Ankle')?.touched"  type="number" placeholder="Ankle">
+
+  <div  *ngIf="designOrderCreateForm.get('Ankle')?.errors!=null&&designOrderCreateForm.get('Ankle')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('Ankle')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('Ankle')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+
+<!--Input Field Unit-->
+<div class="m-3">
+  <input class="input w-50 p-1 rounded-5 border-0 form-control  " formControlName="CrotchDepth" [class.is-valid]="designOrderCreateForm.get('CrotchDepth')?.valid" [class.is-invalid]="designOrderCreateForm.get('CrotchDepth')?.errors!=null&&designOrderCreateForm.get('CrotchDepth')?.touched"  type="number" placeholder="CrotchDepth">
+
+  <div  *ngIf="designOrderCreateForm.get('CrotchDepth')?.errors!=null&&designOrderCreateForm.get('CrotchDepth')?.touched">
+    <div class="invalid-feedback " [style.display]="designOrderCreateForm.get('CrotchDepth')?.errors?.['required']?'block':'none'">Requierd</div>
+    <div class="invalid-feedback" [style.display]="designOrderCreateForm.get('CrotchDepth')?.errors?.['pattern']?'block':'none'">
+      Only Number
+    </div>
+
+  </div>
+
+</div>
+<!--End Input Field Unit-->
+
+  </fieldset>
+
+ <fieldset>
+          <legend>Fabric</legend>
+          <div formArrayName="designFabricModels">
+            <div class="m-3" *ngFor="let designFabric of  designFabricModel.controls; let i=index ;let last=last">
+              <div [formGroupName]="i">
+                <select onfocus="this.size=3" onblur="this.size=1" onchange="this.size=1"  class="input p-1   border-0 me-2" formControlName="fabricId">
+                 <optgroup  label="Fabric">
+                    <option  *ngFor="let fabric of Fabrics" [value]="fabric.fabricId">{{fabric.fabricName}}</option>
+                </optgroup>
+                </select>
+                <select onfocus="this.size=3"  onblur="this.size=1" onchange="this.size=1" class="input p-1 border-0" formControlName="colorId">
+                  <optgroup  label="Color">
+                      <option *ngFor="let color of Colors" [value]="color.colorId">{{color.colorName}}</option>
+                  </optgroup>
+                </select>
+              </div>
+              <button class="btn btn-success m-3 " *ngIf="last"(click)="AddFabric()"><i class="fa-solid fa-plus"></i></button>
+              <button class="btn btn-danger m-1" *ngIf="last&&i>0" (click)="RemoveFabric(i)"><i class="fa-solid fa-minus"></i></button>
+             </div>
+          </div>
+  </fieldset>
+
+  <div class="text-center">
+    <button class="btn" type="submit">Submit</button>
+  </div>
+
+      </form>
+    </div>
+
+  </div>
+<!-- <h1>{{designOrderCreateForm.value|json}}</h1> -->
+
+</section>
+
+<!-- <div class="test">
+
+</div> -->

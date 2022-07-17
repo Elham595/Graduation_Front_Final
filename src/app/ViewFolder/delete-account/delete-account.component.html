@@ -1,0 +1,14 @@
+<div id="formbody">
+    <div class="container">
+        <form [formGroup]='deleteform' (ngSubmit)="submitDelete()" class="myform">
+
+            <label>Enter Your Account Email</label>
+            <input [(ngModel)]="Email" type="text" formControlName="Email" name="" />
+
+            <label class="form-label">Enter Your Account Username</label>
+            <input class="form-controle" [(ngModel)]="UserName" type="text" formControlName="UserName" name="" />
+
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</div>

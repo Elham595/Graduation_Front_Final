@@ -1,0 +1,11 @@
+@import '../tailor-password/tailor-password.component';
+.myform{
+    min-height: 450px;
+}
+.btn{
+    font-size: 21px;
+}
+.fw-lighter{
+    color: rgb(73, 14, 73);
+    font-size: 28px;
+}

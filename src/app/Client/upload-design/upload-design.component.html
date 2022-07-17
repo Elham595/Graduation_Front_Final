@@ -1,0 +1,33 @@
+<section class="bg-section ">
+  <div class="d-flex justify-content-center p-2 ">
+    <header>
+      <h2>Upload Your Design</h2>
+    </header>
+  </div>
+  <div class="container row mx-auto mt-5 justify-content-center align-items-center">
+
+    <div class=" col-lg-4 mb-5 img-container p-0 ">
+
+      <img src="./../../../assets/uploadDesign.jpg" class="w-100 position-relative design-img">
+
+  </div>
+
+    <div class="glass-black-container offset-lg-1 col-lg-6 align-content-stretch">
+      <form class="" [formGroup]="uploadDesignForm"  (ngSubmit)="SubmitDesign()">
+
+        <div class="m-3">
+          <input type ="file" class="input w-100" (change)="onFileSelect($event)" accept="" formControlName="Image">
+        </div>
+
+
+        <div class="text-center">
+          <button class="input  btn btn-hover" type="submit">Submit</button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+

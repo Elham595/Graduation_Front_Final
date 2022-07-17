@@ -1,0 +1,42 @@
+<div
+  class="incoming_msg"
+  *ngIf="message.messageHead == 'received'"
+  style="background-color: rgb(191, 138, 186)"
+>
+  <div class="incoming_msg_img"></div>
+  <div class="received_msg">
+    <div class="received_withd_msg">
+      <p></p>
+      <span class="time_date"> </span>
+    </div>
+  </div>
+</div>
+<div
+  class="outgoing_msg"
+  *ngIf="message.messageHead == 'sent'"
+  style="background-color: rgb(127, 127, 137)"
+>
+  <div class="sent_msg">
+    <p></p>
+    <span class="time_date"> </span>
+  </div>
+</div>
+
+
+
+<div
+  class="row d-flex fw-bold"
+  [ngClass]="{ 'justify-content-end text-white': !recived() }"
+>
+  <div
+    class="col-5 mx-2 rounded img-thumbnail"
+    [ngClass]="{ 'bg-primary': !recived() }"
+  >
+    <div *ngIf="username && recived()">
+      {{ username }}
+    </div>
+    <div class="message-data">
+      <span class="message-data-time">{{ message?.messageText }}</span>
+    </div>
+  </div>
+</div>

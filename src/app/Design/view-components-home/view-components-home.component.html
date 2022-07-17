@@ -1,0 +1,44 @@
+<div class="m-5">
+<div *ngIf="design && design.length > 0" class="row row-cols-md-2 row-cols-md-4 g-7">
+  <div class="col" *ngFor="let item of design">
+    <div class="card">
+      <div class="card-body">
+        <a [routerLink]="['/designdetilas/',item.id]">
+
+          <div class="d-flex justify-content-center">
+            <h5 class="btn">{{ item.clotheType }}</h5>
+          </div>
+          <!-- <img [src]="item.imageUrl" height=200; width=200; class="card-img-top" style="cursor:pointer" /> -->
+        </a>
+        <h1>{{item.status}}</h1>
+        <h1>{{item.clotheType}}</h1>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container main">
+  <div class="" *ngFor="let item of Clothes, let i=index">
+      <div class="card_body" style="margin-top: i*30px;">
+        <a [routerLink]="['/ViewDesigns/',item.clotheName]">
+
+            <h4>{{ item.clotheName }}</h4>
+          <!-- <img [src]="item.imageUrl" height=200; width=200; class="card-img-top" style="cursor:pointer" /> -->
+        </a>
+        <img [src]="images[i]"/>
+        <button class="btn" [routerLink]="['/chooseDesign',item.clotheName,item.clotheId]">Open</button>
+        <button class="btn" [routerLink]="['/client/uploadDesign',item.clotheName,item.clotheId]">Upload</button>
+      </div>
+  </div>
+</div>
+  <button class="btn order" [routerLink]="['/client/home']">view orders</button>
+
+  <!-- <nav class="d-flex justify-content-center align-items-center">
+    <ul class="list-unstyled d-flex justify-content-center align-items-center">
+      <li (click)="ViewAllDesigns(1)" class="border border-secondary p-2 mx-2">1</li>
+      <li (click)="ViewAllDesigns(1)" class="border border-secondary p-2 mx-2">2</li>
+      <li (click)="ViewAllDesigns(1)" class="border border-secondary p-2 mx-2">3</li>
+    </ul>
+  </nav> -->

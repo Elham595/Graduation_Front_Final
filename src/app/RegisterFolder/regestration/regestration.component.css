@@ -1,0 +1,30 @@
+.container{
+    /* background-image: url('../../../assets/green.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;   */
+  margin-top: 40px;
+}
+.image{
+    width: 200px;
+    height: 200px
+}
+.data{
+    margin-left: 150px;
+}
+select{
+    background-color: rgb(127, 113, 231);
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+    border: 1ps solid blue;
+    border-radius: 20px;
+}
+select optgroup{
+    background-color: rgb(143, 131, 236);
+    color: white;
+}
+select option{
+    background-color: rgb(182, 173, 248);
+}

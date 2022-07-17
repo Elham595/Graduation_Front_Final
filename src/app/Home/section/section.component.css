@@ -1,0 +1,18 @@
+section{
+    height: 220px;
+    place-items: center;
+    place-content: center;
+    /* text-align: center; */
+    text-transform: capitalize;
+    padding-top: 60px;
+    margin-bottom: 80px;
+}
+section .content{
+    width: 60%;
+    color: rgb(109, 103, 103);
+}
+@media(max-width:1400px){
+    section {
+        height: 500px;
+    }
+}

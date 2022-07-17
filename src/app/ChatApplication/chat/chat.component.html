@@ -1,0 +1,67 @@
+<div class="container">
+  <h3 class="text-center chat_header">Welcome to our Chat</h3>
+  <div class="messaging">
+    <!-- <div class="inbox_msg">
+      <div class="mesgs">
+        <div class="msg_history">
+          <div *ngFor="let msg of messages">
+            <div
+              class="incoming_msg"
+              *ngIf="msg.messageHead == 'received'"
+              style="background-color: rgb(191, 138, 186)"
+            >
+              <div class="incoming_msg_img"></div>
+              <div class="received_msg">
+                <div class="received_withd_msg">
+                  <p></p>
+                  <span class="time_date"> </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="outgoing_msg"
+              *ngIf="msg.messageHead == 'sent'"
+              style="background-color: rgb(127, 127, 137)"
+            >
+              <div class="sent_msg">
+                <p></p>
+                <span class="time_date"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <div class="row img-thumbnail bg-light rounded chat-container">
+    <div class="col-3">
+      <input class="form-control" (keyup)="filterUsername($event)" />
+      <div
+        *ngFor="let filtedOnlineUser of filtedOnlineUsers"
+        (click)="setActiveChatUser(filtedOnlineUser)"
+      >
+        <div class="row" *ngIf="filtedOnlineUser && !isLogedInUser(filtedOnlineUser)">
+          <div
+            class="col-12 my-1 py-3 btn"
+            [ngClass]="{ 'btn-info': currentUser === filtedOnlineUser }"
+          >
+            <span class="fw-bold text-white">{{
+              filtedOnlineUser.username
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-9" *ngIf="currentUser"> -->
+      <div class="col-9 chat">
+      <div *ngFor="let onlineUser of onlineUsers">
+        <!-- make sure not connect to my self -->
+        <chat-user class="chat_text"
+          *ngIf="onlineUser.connectionId !== connectionId"
+          [user]="onlineUser"
+          [activeUser]="currentUser"
+        ></chat-user>
+      </div>
+    </div>
+  </div>
+</div>

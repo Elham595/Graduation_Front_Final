@@ -1,0 +1,55 @@
+<!-- <section class="bg-special1">
+  <div class="container p-5  m-auto row justify-content-center">
+    <header class="col-12 p-3 mb-5 d-flex justify-content-center">
+      <h2>View Design</h2>
+    </header>
+    <div class="menu col-6 mt-3 p-5 d-flex justify-content-center">
+      <ul >
+        <li [routerLink]="['/chooseDesign',clothe.clotheName,clothe.clotheId]" *ngFor="let clothe of clothes;let cnt=count ; let i=index" [style.z-index]="cnt-i">
+          <a >{{clothe.clotheName}}</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="bg-special2">
+  <div class="container p-5  m-auto row justify-content-center">
+    <header class="col-12 p-3 mb-5 d-flex justify-content-center">
+      <h2 class="text-white">Upload Your Design</h2>
+    </header>
+    <div class="menu col-6 mt-3 p-5 d-flex justify-content-center">
+      <ul >
+        <li [routerLink]="['/client/uploadDesign',clothe.clotheName,clothe.clotheId]" *ngFor="let clothe of clothes;let cnt=count ; let i=index" [style.z-index]="cnt-i">
+          <a >{{clothe.clotheName}}</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</section> -->
+
+
+<section class="bg-special3 p-4 ">
+
+
+  <div class="container p-5  m-auto row justify-content-center">
+    <header class="col-12 p-3 d-flex justify-content-center">
+      <h2>Your Oders</h2>
+    </header>
+    <div class="menu col-4 mt-5 p-5 d-flex justify-content-center">
+      <ul >
+        <li [style.z-index]="5"><a>Tailor Orders</a></li>
+        <li [style.z-index]="4"><a>Tailor Offers</a></li>
+        <li [style.z-index]="3"><a>Completed Orders</a></li>
+        <li [style.z-index]="2" [routerLink]="['/client/designOrder']"><a>Designer Orders</a></li>
+        <li [style.z-index]="1"><a>Store Orders</a></li>
+
+      </ul>
+    </div>
+  </div>
+
+
+</section>
+

@@ -1,0 +1,14 @@
+.parent{
+  height: 850px;
+  width: 100%;
+  background-image: url('../../../assets/h8.jpg');
+  /* background: linear-gradient(45deg,rgb(246, 212, 167),rgb(245, 202, 188)); */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.myheader{
+  padding: 30px;
+}
+img{
+  width: 100%;
+}
